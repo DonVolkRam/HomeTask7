@@ -48,7 +48,7 @@
             this.btnCommand1.TabIndex = 0;
             this.btnCommand1.Text = "+1";
             this.btnCommand1.UseVisualStyleBackColor = true;
-            this.btnCommand1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCommand1.Click += new System.EventHandler(this.btnCommand1_Click);
             // 
             // btnCommand2
             // 
@@ -78,7 +78,7 @@
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(23, 25);
             this.lblNumber.TabIndex = 3;
-            this.lblNumber.Text = "0";
+            this.lblNumber.Text = "1";
             // 
             // btnPlay
             // 

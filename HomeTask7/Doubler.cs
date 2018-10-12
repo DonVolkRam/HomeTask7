@@ -13,10 +13,13 @@ namespace HomeTask7
     public partial class Doubler : Form
     {
         int CommandCount=0;
+        int UserNumber=1;
+        int TargetNumber;
+        Stack;
 //        private delegate int Function();
         private int Increase()
         {
-            return CommandCount++;
+            return ++CommandCount;
         }
 
         private int Zero()
@@ -38,30 +41,34 @@ namespace HomeTask7
         private delegate int Function();
         private void ChangeSteps(Function F)
         {
-            CommandCount = F;
-            lblNumber.Text = Convert.ToString(CommandCount);
+            CommandCount = F();
+            lblStep.Text = Convert.ToString(CommandCount);
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCommand1_Click(object sender, EventArgs e)
         {
             ChangeSteps(Increase);
-            lblNumber.Text = (int.Parse(lblNumber.Text) + 1).ToString();            
+            UserNumber++;
+            lblNumber.Text = Convert.ToString(UserNumber);
         }
-
         private void btnCommand2_Click(object sender, EventArgs e)
         {
             ChangeSteps(Increase);
-            lblNumber.Text = (int.Parse(lblNumber.Text) * 2).ToString();
+            UserNumber *= 2;
+            lblNumber.Text = Convert.ToString(UserNumber);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             ChangeSteps(Zero);
-            lblNumber.Text = "1";            
+            UserNumber = 1;
+            lblNumber.Text = Convert.ToString(UserNumber);
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
             int Target = GetNumber();
+            TargetNumber = Target;
+            UserNumber = 1;
             string text = "Да начнется игра!\n" + "Ваше число : " + Target 
                 + "\n Получите его за минимальное количество ходов";
                                  
@@ -71,5 +78,7 @@ namespace HomeTask7
             lblNumber.Text = "1";
             lblTarget.Text = Convert.ToString(Target);
         }
+
+
     }
 }
