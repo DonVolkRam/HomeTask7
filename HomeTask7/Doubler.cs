@@ -186,7 +186,7 @@ namespace HomeTask7
             TargetNumber = Target;
             UserNumber = 1;
             string text = "Да начнется игра!\n" + "Ваше число : " + Target
-                + "\n Получите его за минимальное количество ходов";
+                + "\nПолучите его за минимальное количество ходов";
 
             MessageBox.Show(text);
 
@@ -223,7 +223,6 @@ namespace HomeTask7
                     lblStep.Text = Convert.ToString(CommandCount = History[History.Count - 1].step);
                 }
             }
-
         }
 
         /// <summary>
@@ -236,6 +235,11 @@ namespace HomeTask7
             this.Close();
         }
 
+        /// <summary>
+        /// Выбор и пременение действия из списка
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbHistory_SelectedIndexChanged(object sender, EventArgs e)
         {
             sender.ToString();
