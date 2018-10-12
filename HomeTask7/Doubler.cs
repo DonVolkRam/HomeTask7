@@ -127,6 +127,8 @@ namespace HomeTask7
             lbHistory.Items.Add(1 + lbHistory.Items.Count + " Инкремент: число  " + HisTemp.first + "  шаг " + HisTemp.step);
 
             ts.Push(HisTemp);
+            if (UserNumber == TargetNumber)
+                MessageBox.Show("Поздравляю! \nВы справились с заданием за " + CommandCount + " шагов");
         }
 
         /// <summary>
@@ -148,6 +150,8 @@ namespace HomeTask7
             lblNumber.Text = Convert.ToString(UserNumber);
             lbHistory.Items.Add(1 + lbHistory.Items.Count + " Умножение: число " + HisTemp.first + "  шаг " + HisTemp.step);
             ts.Push(HisTemp);
+            if (UserNumber == TargetNumber)
+                MessageBox.Show("Поздравляю! \nВы справились с заданием за " + CommandCount + " шагов");
         }
 
         /// <summary>
@@ -189,6 +193,16 @@ namespace HomeTask7
             ChangeSteps(Zero);
             lblNumber.Text = "1";
             lblTarget.Text = Convert.ToString(Target);
+
+            ts.Clear();
+            lbHistory.Items.Clear();
+            History.Clear();
+
+            EventBtn HisTemp;
+            HisTemp.first = 1;
+            HisTemp.step = 0;
+            HisTemp.method = '_';
+            History.Add(HisTemp);
         }
 
         /// <summary>
@@ -220,6 +234,16 @@ namespace HomeTask7
         private void ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lbHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sender.ToString();
+            if (lbHistory.Items.Count > 0)
+            {
+                lblNumber.Text = Convert.ToString(UserNumber = History[lbHistory.SelectedIndex].first);
+                lblStep.Text = Convert.ToString(CommandCount = History[lbHistory.SelectedIndex].step);
+            }
         }
     }
 }

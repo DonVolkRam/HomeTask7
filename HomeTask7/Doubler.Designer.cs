@@ -42,8 +42,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новаяИграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbHistory = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +70,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(181, 122);
+            this.btnReset.Location = new System.Drawing.Point(181, 155);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 2;
@@ -90,7 +90,7 @@
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(181, 155);
+            this.btnPlay.Location = new System.Drawing.Point(12, 155);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(75, 23);
             this.btnPlay.TabIndex = 4;
@@ -150,7 +150,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(12, 155);
+            this.btnCancel.Location = new System.Drawing.Point(181, 120);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 10;
@@ -181,31 +181,32 @@
             // новаяИграToolStripMenuItem
             // 
             this.новаяИграToolStripMenuItem.Name = "новаяИграToolStripMenuItem";
-            this.новаяИграToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.новаяИграToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.новаяИграToolStripMenuItem.Text = "Новая игра";
             this.новаяИграToolStripMenuItem.Click += new System.EventHandler(this.btnPlay_Click);
-            // 
-            // выходToolStripMenuItem
-            // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // отменитьToolStripMenuItem
             // 
             this.отменитьToolStripMenuItem.Name = "отменитьToolStripMenuItem";
-            this.отменитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.отменитьToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.отменитьToolStripMenuItem.Text = "Отменить";
             this.отменитьToolStripMenuItem.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
             // 
             // lbHistory
             // 
             this.lbHistory.FormattingEnabled = true;
             this.lbHistory.Location = new System.Drawing.Point(275, 48);
             this.lbHistory.Name = "lbHistory";
-            this.lbHistory.Size = new System.Drawing.Size(163, 95);
+            this.lbHistory.Size = new System.Drawing.Size(163, 134);
             this.lbHistory.TabIndex = 12;
+            this.lbHistory.SelectedIndexChanged += new System.EventHandler(this.lbHistory_SelectedIndexChanged);
             // 
             // Doubler
             // 
