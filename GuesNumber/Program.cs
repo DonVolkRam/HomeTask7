@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomeTask7
+namespace GuesNumber
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace HomeTask7
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Doubler());
+            Application.Run(new Form1());
         }
     }
 }

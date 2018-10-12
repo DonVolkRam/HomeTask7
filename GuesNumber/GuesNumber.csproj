@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C33BB48D-F634-443F-9803-3F5787D0113C}</ProjectGuid>
+    <ProjectGuid>{4C7F3EE2-D756-4467-9F5C-F1E11775E46A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>HomeTask7</RootNamespace>
-    <AssemblyName>HomeTask7</AssemblyName>
+    <RootNamespace>GuesNumber</RootNamespace>
+    <AssemblyName>GuesNumber</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -53,9 +53,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
